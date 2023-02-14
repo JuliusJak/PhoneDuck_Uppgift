@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RestController
-@RequestMapping("/api/v1/chats")
+@RequestMapping("/chats")
 public class ChatController {
 
     private long identification;
@@ -37,7 +37,7 @@ public class ChatController {
 
 
     @Transactional
-    @DeleteMapping("/{id}/chat")
+    @DeleteMapping("/chat/{id}")
     public void deleteChat(@PathVariable Long id) {
         chatService.deleteChat(id);
         deleteMessagesByChatId(id);
@@ -50,13 +50,13 @@ public class ChatController {
     }
 
 
-    @PostMapping("/{id}/messages")
+    @PostMapping("/messages/{id}")
     public Message createMessage(@PathVariable Long id, @RequestBody Message message) {
         message.setChatId(id);
         return chatService.createMessage(message);
     }
 
-    @GetMapping("/{id}/messages")
+    @GetMapping("/messages/{id}")
     public List<Message> getMessagesByChatId(@PathVariable Long id) {
 
         List<Message> messages = chatService.getMessagesByChatId(id);
