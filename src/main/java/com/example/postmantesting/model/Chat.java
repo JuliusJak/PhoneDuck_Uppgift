@@ -18,8 +18,6 @@ public class Chat {
     @GeneratedValue(strategy = GenerationType.AUTO) // AUTO_INCREMENT
     private Long id;
     private String title;
-    @OneToMany
-    private List<Message> messages;
 
     public Chat(String title) {
         this.title = title;
@@ -41,11 +39,5 @@ public class Chat {
         this.title = title;
     }
 
-    public List<Message> getMessages() {
-        return messages;
-    }
 
-    public void setMessages(List<Message> messages) {
-        this.messages = messages;
-    }
 }

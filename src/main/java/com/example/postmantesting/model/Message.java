@@ -18,15 +18,9 @@ public class Message {
     private String content;
     private Long chatId;
 
-    /*
-    @ManyToOne
-    private Chat chat;
-
-     */
 
     public Message(String content, Chat chat) {
         this.content = content;
-        //this.chat = chat;
     }
 
     public Long getId() {
