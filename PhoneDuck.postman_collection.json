@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "979b6c51-17f2-448e-9f41-c6c2410ee55f",
+		"name": "PhoneDuck",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25851380"
+	},
+	"item": [
+		{
+			"name": "get all chats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/chats/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"chats",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get chat by chatId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/chats/messages/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"chats",
+						"messages",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send new message by chatId",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/chats/messages/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"chats",
+						"messages",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/chats/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"chats",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete chat by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/chats/messages/{id}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"chats",
+						"messages",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
